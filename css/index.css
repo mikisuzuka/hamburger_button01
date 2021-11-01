@@ -1,0 +1,117 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #666;
+}
+
+body li {
+  list-style: none;
+}
+
+@media screen and (min-width: 700px) {
+  .pc-menu {
+    display: block !important;
+    margin-left: auto;
+  }
+  .sp-menu {
+    display: none;
+  }
+}
+
+header {
+  background-color: #ffd6e6;
+  height: 70px;
+}
+
+header h1 {
+  margin-left: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  line-height: 70px;
+}
+
+header .pc-menu {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: none;
+}
+
+header .pc-menu ul {
+  width: 500px;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 20px;
+}
+
+header .pc-menu ul li {
+  line-height: 70px;
+}
+
+header .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100vw;
+  width: 300px;
+  margin-left: auto;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+header .overlay nav {
+  text-align: center;
+  margin-top: 100px;
+}
+
+header .overlay nav li {
+  margin-bottom: 60px;
+}
+
+header .overlay.show {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .sp-menu {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+}
+
+header .sp-menu div {
+  width: 40px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+header .sp-menu div:first-child {
+  -webkit-transform: translate(-50%, -15px);
+          transform: translate(-50%, -15px);
+}
+
+header .sp-menu div:last-child {
+  -webkit-transform: translate(-50%, 12px);
+          transform: translate(-50%, 12px);
+}
+
+main p {
+  margin-top: 30px;
+}
